@@ -1,11 +1,13 @@
-<!-- This app doesn't follow a11y best practices, and the JS file is incomplete. Complete the getLyrics, displayResults, and watchSubmit functions. When you're done, this app should allow a user to search for an artist and song title (both should be required), and display the song lyrics. You should make requests to this API: https://lyricsovh.docs.apiary.io/# . Make any necessary adjustments to make this app accessible. -->
+<!-- This app doesn't follow a11y best practices, and the JS file is incomplete. Complete the getLyrics, displayResults, and watchSubmit functions. 
+  When you're done, this app should allow a user to search for an artist and song title (both should be required), and display the song lyrics. 
+  You should make requests to this API: https://lyricsovh.docs.apiary.io/# . Make any necessary adjustments to make this app accessible. -->
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Country Facts</title>
+    <title>Song Lyrics by Artist</title>
     <script
           src="https://code.jquery.com/jquery-3.2.1.min.js"
           integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -13,19 +15,19 @@
     <link href="index.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <div class="container">
-        <h1>Song Lyrics</h1>
+    <main role="main" class="container">
+        <header role="banner"><h1>Song Lyrics</h1></header>
         <form action="#" class="js-search-form">
-            <span>Artist:</span>
-            <input type="text" class="js-query-artist" placeholder="Queen">
-            <span>Song title:</span>
-            <input type="text" class="js-query-title" placeholder="Under Pressure">
+            <label for="query-artist">Artist:</label>
+            <input id="query-artist" type="text" class="js-query-artist" placeholder="Queen">
+            <label for="query-title">Song title:</label>
+            <input id="query-title" type="text" class="js-query-title" placeholder="Under Pressure">
             <button type="submit">Search</button>
         </form>
-        <div class="hidden" id="results">
+        <section role="region" class="hidden" id="results">
                 
-        </div>
-    </div>
+        </section>
+      </main>
     <script src="index.js"></script>
   </body>
 </html>
